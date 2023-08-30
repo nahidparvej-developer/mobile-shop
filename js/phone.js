@@ -102,19 +102,15 @@ const showDetailsHadle = async (id) => {
 
 showPhoneDetailsModal = (phone) => {
       
-
-  // const allPhoneName = document.getElementById('all-phone-name');
-          
-  //    allPhoneName.innerText = phone.name;
-
      const showDetailsContainer = document.getElementById('show_details_container')
 
      showDetailsContainer.innerHTML = `
      <figure class="shadow-md ml-5 mt-5 mr-5 rounded-lg bg-[#0D6EFD0D]"><img src="${phone.image}" class="p-4 ml-7 lg:ml-28 md:ml-24" /></figure>
+        <div class="ml-5">
         <h3 class="font-bold text-lg my-2">${phone.name}</h3>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
         <p class=" my-2 text-xl text-black "> Storage: <span class="text-sm">${phone?.mainFeatures?.storage}</span></p>
-        <p class=" my-2 text-xl text-black "> Display Size: <span class="text-sm">${phone?.mainFeatures?.displaySize}</span></p>
+        <p class=" my-2 text-xl text-[#0D6EFD] "> Display Size: <span class="text-sm text-black">${phone?.mainFeatures?.displaySize}</span></p>
         <p class=" my-2 text-xl text-black "> Chipset: <span class="text-sm">${phone?.mainFeatures?.chipSet}</span></p>
         <p class=" my-2 text-xl text-black "> Memory: <span class="text-sm">${phone?.mainFeatures?.memory}</span></p>
         <p class=" my-2 text-xl text-black "> Slug: <span class="text-sm">${phone?.slug}</span></p>
@@ -122,10 +118,9 @@ showPhoneDetailsModal = (phone) => {
         <p class=" my-2 text-xl text-black "> Brand: <span class="text-sm">${phone.brand}</span></p>
         <p class=" my-2 text-xl text-black "> GPS: <span class="text-sm">${phone?.others?.GPS? phone?.others?.GPS:'not GPS in availaibe this device'}</span></p>
         
+        </div>
      
-     `
-  
-         
+     `  
         //  modal show
     show_details_modal.showModal();
 }

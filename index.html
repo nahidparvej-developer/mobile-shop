@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header class="bg-[#0D6EFD0D]">
+
+        <!-- nav bar section -->
+        <nav class="lg:ml-20 lg:mr-20">
+            <div class="navbar">
+                <div class="flex-1">
+                    <a class="btn btn-ghost normal-case text-2xl text-black hover:text-blue-600">Smart Zone</a>
+                </div>
+
+
+                <!-- search bar  -->
+                <div class="flex-none">
+                    <!-- <button class="btn bg-[#0D6EFD] hover:bg-sky-500 border-none text-white">Sign Up</button> -->
+                    <input id="search-field" type="text" placeholder="Search..."
+                        class="input input-bordered lg:w-full max-w-xs " />
+                    <button onclick="handleSearch()"
+                        class="btn btn-success ml-3 bg-[#0D6EFD] text-white border-none  hover:bg-sky-500">Search</button>
+
+                </div>
+
+                <!-- log in icon -->
+                <div class="dropdown dropdown-end lg:ml-16">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="Untitled.png" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            </div>
+        </nav>
+
+    <div class="py-10">
+        <h1 class="text-5xl text-center mt-16 text-bold text-black hover:text-blue-600">Smart Zone Mobile Shop</h1>
+        <p class="text-center mt-8">There are many variations of passages of Lorem Ipsum available, but the majority <br> have suffered alteration in
+            some form, by injected humou.</p>
+
+            <div class="text-center mt-8  ">
+                <button  class="btn  bg-[#0D6EFD] hover:bg-sky-500 text-white mb-5">Buy Now</button>
+            </div>
+    </div>
+
+    </header>
+
+    <div class="bg-[#0D6EFD0D] h-36">
+
+    </div>
+
+    <!--  home picture section -->
+    <section class="relative -mt-44">
+        <div class="flex justify-center">
+            <img src="pngwing 3.png" alt="" class="lg:w-52 lg:h-80 lg:mt-16 w-24 h-40 ">
+            <img src="pngwing 1.png" alt="" class="lg:w-60 lg:h-96">
+            <img src="pngwing 3.png" alt="" class="lg:w-52 lg:h-80 lg:mt-16">
+        </div>
+    </section>
+
+    <main>
+
+        <section class="text-center lg:text-end lg:mr-32">
+
+            <!-- <input id="search-field" type="text" placeholder="Search..."
+                class="input input-bordered lg:w-full max-w-xs mt-10" />
+            <button onclick="handleSearch()"
+                class="btn btn-success ml-3 bg-[#0D6EFD] text-white border-none  hover:bg-sky-500">Search</button> -->
+
+        </section>
+
+
+        <section>
+            <!-- loading -->
+            <div id="loading" class="text-center my-56 hidden">
+                <span class="loading loading-bars text-accent loading-lg"></span>
+            </div>
+
+            <!-- all card -->
+            <div id="phone-container"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-20 md:gap-16 md:p-5 md:ml-10 md:mr-10 lg:p-10 lg:ml-20 lg:mr-20 mt-10 p-3">
+
+            </div>
+            <!-- show all phone -->
+            <div id="show-all-container" class="hidden text-center ">
+                <button onclick="showAllHandle ()" class="btn  bg-[#0D6EFD] hover:bg-sky-500 text-white mb-5">Show
+                    All</button>
+            </div>
+        </section>
+
+        <!-- show mpdal details  -->
+
+
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn hidden" onclick="show_details_modal.showModal()">open modal</button>
+        <dialog id="show_details_modal" class="modal ">
+
+            <form method="dialog" class="modal-box  ">
+
+                <!-- image  -->
+
+                <div id="show_details_container">
+
+                </div>
+
+                <!-- phone name -->
+                <!-- <h3 id="all-phone-name" class="font-bold text-lg"></h3> -->
+                <!-- <p><span>${phone?.mainFuture?.storage}</span></p> -->
+
+
+
+                <div class="modal-action ">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn  bg-[#DC3545] hover:bg-error text-white w-28 border-none ">Close</button>
+                </div>
+            </form>
+        </dialog>
+
+
+
+    </main>
+
+    <script src="js/phone.js"></script>
+</body>
+
+</html>
